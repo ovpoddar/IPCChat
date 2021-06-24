@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "OneToMany\Client\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OnewayOneToOne", "OnewayOneToOne", "{E33F869B-63D7-4B2C-8AB0-593092A84238}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{43F3C89D-3831-4C87-8A6C-65648695BE53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "OnewayOneToOne\Client\Client.csproj", "{43F3C89D-3831-4C87-8A6C-65648695BE53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{7264FB8A-19B5-4227-95E4-2D5F49D1CF0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "OnewayOneToOne\Server\Server.csproj", "{7264FB8A-19B5-4227-95E4-2D5F49D1CF0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
