@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Server
@@ -66,7 +60,7 @@ namespace Server
 
         private void DataReceived(IAsyncResult ar)
         {
-            var buffer =(byte[]?)ar.AsyncState;
+            var buffer = (byte[]?)ar.AsyncState;
             var receved = _stream.EndRead(ar);
             if (receved == 0 || buffer == null)
             {

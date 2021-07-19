@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Server
@@ -45,7 +39,7 @@ namespace Server
             var user = tcpListener.EndAcceptTcpClient(ar);
             var buffer = new byte[user.ReceiveBufferSize];
 
-            NetworkStream =user.GetStream();
+            NetworkStream = user.GetStream();
             NetworkStream.BeginRead(buffer, 0, buffer.Length, readData, buffer);
         }
 
