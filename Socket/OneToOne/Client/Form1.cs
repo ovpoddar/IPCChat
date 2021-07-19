@@ -21,7 +21,7 @@ namespace Client
             try
             {
                 _clientSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-                _clientSocket.BeginConnect(new IPEndPoint(IPAddress.Parse(TxtIp.Text), int.Parse(TxtPort.Text)), this.Connceting, null);
+                _clientSocket.BeginConnect(new IPEndPoint(IPAddress.Parse(TxtIp.Text), int.Parse(TxtPort.Text)), Connceting, null);
             }
             catch (Exception ex)
             {

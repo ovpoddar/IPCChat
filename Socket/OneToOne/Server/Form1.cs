@@ -69,6 +69,7 @@ namespace Server
                 listBox1.Items.Add(message);
             });
         }
+
         private IPEndPoint GetIpPort()
         {
             var ip = string.IsNullOrWhiteSpace(TxtIp.Text) ? IPAddress.Any : IPAddress.Parse(TxtIp.Text);
