@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31313.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "OneToOne\Client\Client.csproj", "{F2E11897-C741-454B-82F6-D76CDAE4D8C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Socket\OneToOne\Client\Client.csproj", "{F2E11897-C741-454B-82F6-D76CDAE4D8C4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "OneToOne\Server\Server.csproj", "{D270F38A-2C36-4BD7-90D4-9286C192FD47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Socket\OneToOne\Server\Server.csproj", "{D270F38A-2C36-4BD7-90D4-9286C192FD47}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OneToOne", "OneToOne", "{6D4715DE-5FAD-44AA-B5C6-DA9F4D2C2CDB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OneToOne", "Socket\OneToOne", "{6D4715DE-5FAD-44AA-B5C6-DA9F4D2C2CDB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OneToMany", "OneToMany", "{AA4A7E0E-9F09-4291-B886-2F3E493D8D1D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OneToMany", "Socket\OneToMany", "{AA4A7E0E-9F09-4291-B886-2F3E493D8D1D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "OneToMany\Server\Server.csproj", "{2D104DE6-9667-41AD-9FFB-F6EDE99A23FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Socket\OneToMany\Server\Server.csproj", "{2D104DE6-9667-41AD-9FFB-F6EDE99A23FF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "OneToMany\Client\Client.csproj", "{934687E9-FD26-4F1F-8664-E956055EBC5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Socket\OneToMany\Client\Client.csproj", "{934687E9-FD26-4F1F-8664-E956055EBC5B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OnewayOneToOne", "OnewayOneToOne", "{E33F869B-63D7-4B2C-8AB0-593092A84238}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OnewayOneToOne", "Socket\OnewayOneToOne", "{E33F869B-63D7-4B2C-8AB0-593092A84238}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "OnewayOneToOne\Client\Client.csproj", "{43F3C89D-3831-4C87-8A6C-65648695BE53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Socket\OnewayOneToOne\Client\Client.csproj", "{43F3C89D-3831-4C87-8A6C-65648695BE53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "OnewayOneToOne\Server\Server.csproj", "{7264FB8A-19B5-4227-95E4-2D5F49D1CF0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Socket\OnewayOneToOne\Server\Server.csproj", "{7264FB8A-19B5-4227-95E4-2D5F49D1CF0A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
