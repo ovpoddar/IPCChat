@@ -20,21 +20,15 @@ namespace Server
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            var Server = new TcpListener(new IPEndPoint(IPAddress.Parse(TxtIp.Text), int.Parse(TxtPort.Text)));
-            Server.Start();
-            Server.BeginAcceptTcpClient(Acceptstart, Server);
-        }
         private void Acceptstart(IAsyncResult ar)
         {
-            var Server = (TcpListener)ar.AsyncState;
-            var user = Server.EndAcceptTcpClient(ar);
+            var tcpListener = (TcpListener)ar.AsyncState;
+            var user = tcpListener.EndAcceptTcpClient(ar);
             var buffer = new byte[user.ReceiveBufferSize];
 
             NetworkStream =user.GetStream();
             NetworkStream.BeginRead(buffer, 0, buffer.Length, readData, buffer);
-            Server.BeginAcceptTcpClient(Acceptstart, Server);
+            tcpListener.BeginAcceptTcpClient(Acceptstart, tcpListener);
         }
 
 
@@ -49,7 +43,24 @@ namespace Server
             {
                 listBox1.Items.Add(message);
             });
-            NetworkStream.BeginRead(buffer, 0, buffer.Length, readData, null);
+            NetworkStream.BeginRead(buffer, 0, buffer.Length, readData, buffer);
+        }
+
+
+        private void BtnOpenPort_Click(object sender, EventArgs e)
+        {
+            var ipPort = GetIpPort();
+            var tcpListener = new TcpListener(ipPort);
+            tcpListener.Start();
+            tcpListener.BeginAcceptTcpClient(Acceptstart, tcpListener);
+        }
+
+
+        private IPEndPoint GetIpPort()
+        {
+            var ip = string.IsNullOrWhiteSpace(TxtIp.Text) ? IPAddress.Any : IPAddress.Parse(TxtIp.Text);
+            var port = 45400;
+            return new IPEndPoint(ip, port);
         }
     }
 }

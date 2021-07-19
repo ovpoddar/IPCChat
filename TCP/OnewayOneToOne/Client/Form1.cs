@@ -22,11 +22,22 @@ namespace Client
         private void button1_Click(object sender, EventArgs e)
         {
             var tcpClient = new TcpClient();
-            tcpClient.Connect(IPAddress.Parse(TxtIp.Text), int.Parse(TxtPort.Text);
+            tcpClient.BeginConnect(IPAddress.Parse(TxtIp.Text), 45400, callBack, tcpClient);
+                
+        }
+
+        private void callBack(IAsyncResult ar)
+        {
+            var tcpClient = (TcpClient)ar.AsyncState;
             var stream = tcpClient.GetStream();
-            stream.Write(Encoding.ASCII.GetBytes(TxtMessage.Text));
+            var text = Encoding.ASCII.GetBytes(TxtMessage.Text);
+            stream.BeginWrite(text, 0,text.Length,write, stream);
+        }
+
+        private void write(IAsyncResult ar)
+        {
+            var stream = (NetworkStream)ar.AsyncState;
             stream.Flush();
-            stream.Close();            
         }
     }
 }

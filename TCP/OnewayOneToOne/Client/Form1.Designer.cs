@@ -31,7 +31,6 @@ namespace Client
         {
             this.button1 = new System.Windows.Forms.Button();
             this.TxtIp = new System.Windows.Forms.TextBox();
-            this.TxtPort = new System.Windows.Forms.TextBox();
             this.TxtMessage = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -47,17 +46,10 @@ namespace Client
             // 
             // TxtIp
             // 
-            this.TxtIp.Location = new System.Drawing.Point(233, 54);
+            this.TxtIp.Location = new System.Drawing.Point(299, 55);
             this.TxtIp.Name = "TxtIp";
             this.TxtIp.Size = new System.Drawing.Size(193, 23);
             this.TxtIp.TabIndex = 1;
-            // 
-            // TxtPort
-            // 
-            this.TxtPort.Location = new System.Drawing.Point(449, 54);
-            this.TxtPort.Name = "TxtPort";
-            this.TxtPort.Size = new System.Drawing.Size(100, 23);
-            this.TxtPort.TabIndex = 1;
             // 
             // TxtMessage
             // 
@@ -72,7 +64,6 @@ namespace Client
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.TxtMessage);
-            this.Controls.Add(this.TxtPort);
             this.Controls.Add(this.TxtIp);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
@@ -86,7 +77,6 @@ namespace Client
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox TxtIp;
-        private System.Windows.Forms.TextBox TxtPort;
         private System.Windows.Forms.TextBox TxtMessage;
     }
 }

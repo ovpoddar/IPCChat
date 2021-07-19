@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace Server
 {
     partial class Form1
@@ -31,7 +33,7 @@ namespace Server
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.TxtIp = new System.Windows.Forms.TextBox();
-            this.TxtPort = new System.Windows.Forms.TextBox();
+            this.BtnOpenPort = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -45,29 +47,31 @@ namespace Server
             // 
             // TxtIp
             // 
-            this.TxtIp.Location = new System.Drawing.Point(132, 34);
+            this.TxtIp.Location = new System.Drawing.Point(201, 33);
             this.TxtIp.Name = "TxtIp";
-            this.TxtIp.Size = new System.Drawing.Size(241, 23);
+            this.TxtIp.Size = new System.Drawing.Size(283, 23);
             this.TxtIp.TabIndex = 1;
             // 
-            // TxtPort
+            // BtnOpenPort
             // 
-            this.TxtPort.Location = new System.Drawing.Point(400, 34);
-            this.TxtPort.Name = "TxtPort";
-            this.TxtPort.Size = new System.Drawing.Size(92, 23);
-            this.TxtPort.TabIndex = 1;
+            this.BtnOpenPort.Location = new System.Drawing.Point(330, 312);
+            this.BtnOpenPort.Name = "BtnOpenPort";
+            this.BtnOpenPort.Size = new System.Drawing.Size(75, 23);
+            this.BtnOpenPort.TabIndex = 2;
+            this.BtnOpenPort.Text = "Open in 100";
+            this.BtnOpenPort.UseVisualStyleBackColor = true;
+            this.BtnOpenPort.Click += new System.EventHandler(this.BtnOpenPort_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.TxtPort);
+            this.Controls.Add(this.BtnOpenPort);
             this.Controls.Add(this.TxtIp);
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,7 +81,7 @@ namespace Server
 
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox TxtIp;
-        private System.Windows.Forms.TextBox TxtPort;
+        private System.Windows.Forms.Button BtnOpenPort;
     }
 }
 
