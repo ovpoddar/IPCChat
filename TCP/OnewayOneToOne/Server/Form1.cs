@@ -20,6 +20,25 @@ namespace Server
             InitializeComponent();
         }
 
+        private void BtnOpenPort_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var ipPort = GetIpPort();
+                var tcpListener = new TcpListener(ipPort);
+                tcpListener.Start();
+                tcpListener.BeginAcceptTcpClient(Acceptstart, tcpListener);
+                Invoke((Action)delegate
+                {
+                    listBox1.Items.Add($"port is activate on this address{ipPort.Address}{ipPort.Port}");
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void Acceptstart(IAsyncResult ar)
         {
             var tcpListener = (TcpListener)ar.AsyncState;
@@ -28,33 +47,29 @@ namespace Server
 
             NetworkStream =user.GetStream();
             NetworkStream.BeginRead(buffer, 0, buffer.Length, readData, buffer);
-            tcpListener.BeginAcceptTcpClient(Acceptstart, tcpListener);
         }
 
 
         void readData(IAsyncResult ar)
         {
-            var buffer = (byte[])ar.AsyncState;
-            var received = NetworkStream.EndRead(ar);
-            if (received == 0 || buffer == null)
-                return; 
-            var message = Encoding.ASCII.GetString(buffer, 0, received);
-            Invoke((Action)delegate
+            try
             {
-                listBox1.Items.Add(message);
-            });
-            NetworkStream.BeginRead(buffer, 0, buffer.Length, readData, buffer);
+                var buffer = (byte[])ar.AsyncState;
+                var received = NetworkStream.EndRead(ar);
+                if (received == 0 || buffer == null)
+                    return;
+                var message = Encoding.ASCII.GetString(buffer, 0, received);
+                Invoke((Action)delegate
+                {
+                    listBox1.Items.Add(message);
+                });
+                NetworkStream.BeginRead(buffer, 0, buffer.Length, readData, buffer);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
-
-
-        private void BtnOpenPort_Click(object sender, EventArgs e)
-        {
-            var ipPort = GetIpPort();
-            var tcpListener = new TcpListener(ipPort);
-            tcpListener.Start();
-            tcpListener.BeginAcceptTcpClient(Acceptstart, tcpListener);
-        }
-
 
         private IPEndPoint GetIpPort()
         {

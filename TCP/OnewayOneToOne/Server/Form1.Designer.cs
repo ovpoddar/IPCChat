@@ -56,9 +56,9 @@ namespace Server
             // 
             this.BtnOpenPort.Location = new System.Drawing.Point(330, 312);
             this.BtnOpenPort.Name = "BtnOpenPort";
-            this.BtnOpenPort.Size = new System.Drawing.Size(75, 23);
+            this.BtnOpenPort.Size = new System.Drawing.Size(141, 23);
             this.BtnOpenPort.TabIndex = 2;
-            this.BtnOpenPort.Text = "Open in 100";
+            this.BtnOpenPort.Text = "Open in 45400";
             this.BtnOpenPort.UseVisualStyleBackColor = true;
             this.BtnOpenPort.Click += new System.EventHandler(this.BtnOpenPort_Click);
             // 

@@ -23,7 +23,6 @@ namespace Client
         {
             var tcpClient = new TcpClient();
             tcpClient.BeginConnect(IPAddress.Parse(TxtIp.Text), 45400, callBack, tcpClient);
-                
         }
 
         private void callBack(IAsyncResult ar)
@@ -31,12 +30,7 @@ namespace Client
             var tcpClient = (TcpClient)ar.AsyncState;
             var stream = tcpClient.GetStream();
             var text = Encoding.ASCII.GetBytes(TxtMessage.Text);
-            stream.BeginWrite(text, 0,text.Length,write, stream);
-        }
-
-        private void write(IAsyncResult ar)
-        {
-            var stream = (NetworkStream)ar.AsyncState;
+            stream.Write(text);
             stream.Flush();
         }
     }
