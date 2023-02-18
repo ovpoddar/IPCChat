@@ -24,7 +24,7 @@ namespace Server
                 tcpListener.BeginAcceptTcpClient(Acceptstart, tcpListener);
                 Invoke((Action)delegate
                 {
-                    listBox1.Items.Add($"port is activate on this address{ipPort.Address}{ipPort.Port}");
+                    listBox1.Items.Add($"port is activate on this address{ipPort.Address}:{ipPort.Port}");
                 });
             }
             catch (Exception ex)

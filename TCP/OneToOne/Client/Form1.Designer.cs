@@ -43,7 +43,7 @@ namespace Client
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.TxtIp.Location = new System.Drawing.Point(12, 12);
 			this.TxtIp.Name = "TxtIp";
-			this.TxtIp.PlaceholderText = "put the ipv4 of the client.";
+			this.TxtIp.PlaceholderText = "put the ipv4 of the server.";
 			this.TxtIp.Size = new System.Drawing.Size(420, 23);
 			this.TxtIp.TabIndex = 0;
 			// 
