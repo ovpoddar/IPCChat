@@ -64,6 +64,7 @@ namespace Server
 			// 
 			this.TxtMessage.Location = new System.Drawing.Point(12, 313);
 			this.TxtMessage.Name = "TxtMessage";
+			this.TxtMessage.PlaceholderText = "Message";
 			this.TxtMessage.Size = new System.Drawing.Size(695, 23);
 			this.TxtMessage.TabIndex = 3;
 			// 

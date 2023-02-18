@@ -50,7 +50,7 @@ namespace Client
 			// 
 			// TxtPort
 			// 
-			this.TxtPort.Location = new System.Drawing.Point(489, 13);
+			this.TxtPort.Location = new System.Drawing.Point(435, 12);
 			this.TxtPort.Name = "TxtPort";
 			this.TxtPort.PlaceholderText = "port to connect";
 			this.TxtPort.Size = new System.Drawing.Size(101, 23);
@@ -61,7 +61,7 @@ namespace Client
 			this.TxtIp.Location = new System.Drawing.Point(12, 12);
 			this.TxtIp.Name = "TxtIp";
 			this.TxtIp.PlaceholderText = "put the ipv4 of the client.";
-			this.TxtIp.Size = new System.Drawing.Size(471, 23);
+			this.TxtIp.Size = new System.Drawing.Size(417, 23);
 			this.TxtIp.TabIndex = 3;
 			// 
 			// listBox1
@@ -93,10 +93,10 @@ namespace Client
 			// 
 			// TxtName
 			// 
-			this.TxtName.Location = new System.Drawing.Point(597, 12);
+			this.TxtName.Location = new System.Drawing.Point(542, 12);
 			this.TxtName.Name = "TxtName";
 			this.TxtName.PlaceholderText = "Your name as register";
-			this.TxtName.Size = new System.Drawing.Size(100, 23);
+			this.TxtName.Size = new System.Drawing.Size(155, 23);
 			this.TxtName.TabIndex = 9;
 			// 
 			// Form1

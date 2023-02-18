@@ -90,6 +90,7 @@ namespace Client
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.TxtMessage.Location = new System.Drawing.Point(12, 314);
 			this.TxtMessage.Name = "TxtMessage";
+			this.TxtMessage.PlaceholderText = "Message";
 			this.TxtMessage.Size = new System.Drawing.Size(700, 23);
 			this.TxtMessage.TabIndex = 3;
 			// 
