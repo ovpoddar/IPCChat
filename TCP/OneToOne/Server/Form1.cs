@@ -22,7 +22,7 @@ namespace Server
                 var tcpListener = new TcpListener(ipPort);
                 tcpListener.Start();
                 tcpListener.BeginAcceptTcpClient(AcceptClient, tcpListener);
-                logging($"port is activate on this address{ipPort.Address}{ipPort.Port}");
+                logging($"port is activate on this address{ipPort.Address}:{ipPort.Port}");
             }
             catch (Exception ex)
             {
